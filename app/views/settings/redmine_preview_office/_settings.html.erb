@@ -1,0 +1,17 @@
+<fieldset class="box tabular settings"><legend><%= l(:text_preview_office_embed_setting) %></legend>
+  <p>  
+	<label><%= l(:text_preview_office_use_object_embed)  %></label>
+	  <%= radio_button_tag 'settings[pdf_embedding]', 0, (settings["pdf_embedding"] == "0" ) %>
+  </p>
+  <p>
+	<label><%= l(:text_preview_office_use_iframe)  %></label>
+	  <%= radio_button_tag 'settings[pdf_embedding]', 1, (settings["pdf_embedding"] == "1" ) %>
+  </p>
+  <p>
+	<a class='icon icon-help' href='#' title='<%= "#{l(:label_help)}" %>' onclick='$("#help_redmine_preview_office_embed_settings").toggle(); return false;'><%= l(:label_help) %></a>
+	<br>
+	<span id="help_redmine_preview_office_embed_settings" class="info" style="display: none;">
+	  <em class="info"><%= l(:text_help_redmine_preview_office_embed_settings) %></em>
+	</span>
+  </p>
+</fieldset>

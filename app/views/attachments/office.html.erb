@@ -1,0 +1,8 @@
+<%= render :layout => 'layouts/file' do %>
+  <script type="text/javascript">  
+	function resizeObject(obj) {
+	 obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+	}
+  </script>
+  <%= preview_office_tag @attachment %>
+<% end %>
