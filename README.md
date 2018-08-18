@@ -49,4 +49,4 @@ Supports .doc, .docx, .xls, .xlsx, .ppt, .pptx, .odt
 
 **1.0.1** added check for libreoffice
 
-**1.0.0** running on Redmine 3.4.6
+**1.0.0** running on Redmine 3.4.6 
