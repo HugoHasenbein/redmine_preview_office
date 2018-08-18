@@ -3,6 +3,8 @@
 Plugin for Redmine. Show Microsoft Office attachments in preview pane. 
 Supports .doc, .docx, .xls, .xlsx, .ppt, .pptx, .odt
 
+![PNG that represents a quick overview](/doc/Overview.png)
+
 ### Use case(s)
 
 * View contents of a Microsoft Office file as pdf in Redmine's preview pane 
