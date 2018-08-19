@@ -39,14 +39,20 @@ Supports .doc, .docx, .xls, .xlsx, .ppt, .pptx, .rtf, .odt
 ### Localisations
 
 * 1.0.1 
-- English
-- German
+  - English
+  - German
 * 1.0.0 - no localizable strings present in plugin
 
 ### Change-Log* 
 
-**1.0.2** added option to embed preview via `<object><embed>`-tag or via `<iframe>`-tag
+**1.0.3** 
+  - cleaned code
 
-**1.0.1** added check for libreoffice
+**1.0.2** a
+  - dded option to embed preview via `<object><embed>`-tag or via `<iframe>`-tag
 
-**1.0.0** running on Redmine 3.4.6 
+**1.0.1** 
+  - added check for libreoffice
+
+**1.0.0** 
+  - running on Redmine 3.4.6 

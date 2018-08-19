@@ -33,20 +33,11 @@ module RedminePreviewOffice
           # if the preview cannot be generated.
           def preview_office(options={})
             if is_office_doc? && readable?
-              size = options[:size].to_i
-              if size > 0
-                # Limit the number of previews per image
-                size = (size / 50) * 50
-                # Maximum preview size
-                size = 1600 if size > 1600
-              else
-                size = Setting.thumbnails_size.to_i
-              end
-              size = 100 unless size > 0
-              target = File.join(self.class.thumbnails_storage_path, "#{id}_#{digest}_#{size}.pdf")
+
+              target = File.join(self.class.thumbnails_storage_path, "#{id}_#{digest}.pdf")
 
               begin
-                Redmine::Thumbnail.generate_preview_office(self.diskfile, target, size)
+                Redmine::Thumbnail.generate_preview_office(self.diskfile, target)
               rescue => e
                 logger.error "An error occured while generating preview for #{disk_filename} to #{target}\nException was: #{e.message}" if logger
                 return nil

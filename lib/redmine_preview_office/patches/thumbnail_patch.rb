@@ -33,10 +33,10 @@ module RedminePreviewOffice
           # a constant and how to patch a function, which has been defined as self.function()
           # in a base.class_eval block
           #
-		  @REDMINE_PREVIEW_OFFICE_CONVERT_BIN = ('libreoffice').freeze
+		  @REDMINE_PREVIEW_OFFICE_CONVERT_BIN = ('soffice').freeze
 		  
 		  # Generates a thumbnail for the source image to target
-		  def self.generate_preview_office(source, target, size)
+		  def self.generate_preview_office(source, target )
 
 			unless File.exists?(target)
 

@@ -25,7 +25,7 @@ Redmine::Plugin.register :redmine_preview_office do
   name 'Redmine Preview Office'
   author 'Stephan Wenzel'
   description 'This is a plugin for Redmine to preview a Microsoft Office attachment file as pdf'
-  version '1.0.2'
+  version '1.0.3'
   url 'https://github.com/HugoHasenbein/redmine_preview_office'
   author_url 'https://github.com/HugoHasenbein/redmine_preview_office'
 
