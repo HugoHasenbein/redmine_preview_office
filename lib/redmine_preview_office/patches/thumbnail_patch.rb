@@ -46,8 +46,12 @@ module RedminePreviewOffice
 			  end
 			  			                
 			  Dir.mktmpdir do |tmpdir|
-				cmd = "cd #{tmpdir}; #{shell_quote @REDMINE_PREVIEW_OFFICE_CONVERT_BIN} --convert-to pdf #{shell_quote source}; mv #{shell_quote File.basename(source, File.extname(source)) + ".pdf"} #{shell_quote target}"
-
+			    if Redmine::Platform.mswin?
+			      cmd = "cd #{tmpdir} & #{shell_quote @REDMINE_PREVIEW_OFFICE_CONVERT_BIN} --convert-to pdf #{shell_quote source} & move #{shell_quote File.basename(source, File.extname(source)) + ".pdf"} #{shell_quote target}"
+			    else
+				  cmd = "cd #{tmpdir}; #{shell_quote @REDMINE_PREVIEW_OFFICE_CONVERT_BIN} --convert-to pdf #{shell_quote source}; mv #{shell_quote File.basename(source, File.extname(source)) + ".pdf"} #{shell_quote target}"
+                end
+                
 				unless system(cmd)
 				  logger.error("Creating preview with libreoffice failed (#{$?}):\nCommand: #{cmd}")
 				  return nil
