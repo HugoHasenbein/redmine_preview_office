@@ -47,6 +47,7 @@ Supports .doc, .docx, .xls, .xlsx, .ppt, .pptx, .rtf, .odt
 
 **1.0.3** 
   - cleaned code
+  - added support for MS Windows platform
 
 **1.0.2** a
   - dded option to embed preview via `<object><embed>`-tag or via `<iframe>`-tag
