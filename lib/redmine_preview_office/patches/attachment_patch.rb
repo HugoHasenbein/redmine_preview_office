@@ -55,7 +55,7 @@ module RedminePreviewOffice
           end #def
           
           def is_office_doc?
-            %w(.doc .docx .xls .xlsx .ppt .pptx .rtf).include?( File.extname(filename).downcase )
+            %w(.doc .docx .xls .xlsx .ppt .pptx .rtf .odt).include?( File.extname(filename).downcase )
           end #def
 
 

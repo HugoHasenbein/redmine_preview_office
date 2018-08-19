@@ -1,7 +1,7 @@
 # redmine_preview_office
 
 Plugin for Redmine. Show Microsoft Office attachments in preview pane. 
-Supports .doc, .docx, .xls, .xlsx, .ppt, .pptx, .odt
+Supports .doc, .docx, .xls, .xlsx, .ppt, .pptx, .rtf, .odt
 
 ![PNG that represents a quick overview](/doc/Overview.png)
 

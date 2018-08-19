@@ -44,10 +44,7 @@ module RedminePreviewOffice
 			  unless File.exists?(directory)
 				FileUtils.mkdir_p directory
 			  end
-			  
-			  thumbnail_directory = File.join(Rails.root, "tmp", "thumbnails")
-			  media_directory = File.basename(target, File.extname(target))
-			                
+			  			                
 			  Dir.mktmpdir do |tmpdir|
 				cmd = "cd #{tmpdir}; #{shell_quote @REDMINE_PREVIEW_OFFICE_CONVERT_BIN} --convert-to pdf #{shell_quote source}; mv #{shell_quote File.basename(source, File.extname(source)) + ".pdf"} #{shell_quote target}"
 
